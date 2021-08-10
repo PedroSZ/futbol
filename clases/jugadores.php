@@ -4,8 +4,7 @@ include_once 'db.php';
 class Jugadores extends DB {
 	private $id;
 	private $nombre;
-	private $a_paterno;
-	private $a_materno;
+	private $apellidos
 	private $foto;
 	private $localidad;
 	private $nacimiento;
@@ -16,8 +15,7 @@ class Jugadores extends DB {
 	//stters and getters ***********************************************
 	public function setId($id){ $this->id = $id; }
 	public function setNombre($nombre){ $this->nombre = $nombre; }
-	public function setA_Paterno($a_paterno){ $this->a_paterno = $a_paterno; }
-	public function setA_Materno($a_materno){ $this->a_materno = $a_materno; }
+	public function setApellidos($apellidos){ $this->apellidos = $apellidos; }
 	public function setFoto($foto){ $this->foto = $foto; }
 	public function setLocalidad($localidad){ $this->localidad = $localidad; }
 	public function setNacimiento($nacimiento){ $this->nacimiento = $nacimiento; }
@@ -26,8 +24,7 @@ class Jugadores extends DB {
 
 	public function getId(){ return $this->id; }
 	public function getNombre(){ return $this->nombre; }
-	public function getA_Paterno(){ return $this->a_paterno; }
-	public function getA_Materno(){ return $this->a_materno; }
+	public function getApellidos(){ return $this->apellidos; }
 	public function getFoto(){ return $this->foto; }
 	public function getLocalidad(){ return $this->localidad; }
 	public function getNacimiento(){ return $this->nacimiento; }
@@ -43,38 +40,48 @@ class Jugadores extends DB {
 		return $query->fetchAll(PDO::FETCH_ASSOC);
 	}
 
-	public function consultarCodigo($codigo){
-		$query = $this->connect()->prepare('SELECT * FROM estudiante WHERE curp = :user');
-		$query->execute(['user' => $codigo]);
+	public function consultarId($id){
+		$query = $this->connect()->prepare('SELECT * FROM jugador WHERE id = :id');
+		$query->execute(['id' => $id]);
 		return $query->fetch(PDO::FETCH_ASSOC);
 	}
 
-	public function eliminar($codigo){
-		$query = $this->connect()->prepare('DELETE FROM estudiante WHERE curp = :user');
-		$query->execute(['user' => $codigo]);
+	public function eliminar($id){
+		$query = $this->connect()->prepare('DELETE FROM jugador WHERE id = :id');
+		$query->execute(['id' => $id]);
 	}
-
-	public function actualizar(){
-		$sql = "UPDATE estudiante SET nombre = :nombre, apellidos = :apellidos, carrera = :carrera, grado = :grado, grupo = :grupo	WHERE curp = :codigo";
+	
+	public function tranferenciaDeEquipo($id){
+		$sql = "UPDATE jugador SET equipo = :equipo	WHERE id = :id";
+		$query = $this->connect()->prepare($sql);
+		$query->execute([
+			'equipo' => $this->equipo]);
+	}
+	public function actualizar($id){
+		$sql = "UPDATE jugador SET nombre = :nombre, apellidos = :apellidos, foto = :foto, localidad = :localidad, nacimiento = :nacimiento, status = :status, equipo = :equipo	WHERE id = :id";
 		$query = $this->connect()->prepare($sql);
 		$query->execute([
 			'nombre' => $this->nombre,
 			'apellidos' => $this->apellidos,
-			'carrera' => $this->carrera,
-			'grado' => $this->grado,
-			'grupo' => $this->grupo]);
+			'foto' => $this->foto,
+			'localidad' => $this->localidad,
+			'nacimiento' => $this->nacimiento,
+			'status' => $this->status,
+			'equipo' => $this->equipo]);
 	}
 
 	public function guardar() {
-		$sql = "INSERT INTO estudiante (curp, nombre, apellidos, carrera, grado, grupo) VALUES(:codigo, :nombre, :apellidos, :carrera, :grado, :grupo)";
+		$sql = "INSERT INTO estudiante (id, nombre, apellidos, foto, localidad, nacimiento, status) VALUES(:id, :nombre, :apellidos, :foto, :localidad, :nacimiento, :status, :equipo)";
 		$query = $this->connect()->prepare($sql);
 		$query->execute([
-			'codigo' => $this->codigo,
+			'id' => $this->id,
 			'nombre' => $this->nombre,
 			'apellidos' => $this->apellidos,
-			'carrera' => $this->carrera,
-			'grado' => $this->grado,
-			'grupo' => $this->grupo]);
+			'carrera' => $this->foto,
+			'grado' => $this->localidad,
+			'grupo' => $this->nacimiento,
+			'status' => $this->status,
+			'equipo' => $this->equipo]);
 	}
 }
 
