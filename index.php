@@ -1,7 +1,11 @@
+<?php /*
+PAGINA ACTUALIZADA PARTE DEL TITULO DE LA PAGINA
+*/
+?>
 </!DOCTYPE html>
 <html lang="es">
 	<head>
-	 	<title>Documento sin título</title>
+	 	<title>Liga de Futbol Intercomunidade de Ameca</title>
 	 	<style type="text/css">
 			html, body, div, iframe {
 				margin:0;
@@ -13,7 +17,7 @@
 				display:block;
 				width:100%;
 				border:none;
-			} 
+			}
 
 		</style>
 	</head>

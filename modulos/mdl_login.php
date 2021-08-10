@@ -1,3 +1,7 @@
+<?php /*
+PAGINA ACTUALIZADA PARTE DE LOS MENUS
+*/
+?>
 <?php
 include_once 'clases/usuario.php';
 include_once 'clases/sesion.php';
@@ -7,11 +11,12 @@ if(isset($_SESSION['user'])){
     $user = new Usuario();//******AUTENTICAR USUARIOS (RF-01) (RF-02) (RF-03)
    	$user->establecerDatos($userSession->getCurrentUser());
     switch ($user->getTipo()) {
-    	case '1': header('location: menuAdmin.php');		break;
-    	case '2': header('location: menuInstructor.php');	break;
-    	case '3': header('location: menuEstudiante.php');	break;
-		
-		
+      case '1': header('location: menuAdmin.php');		break;
+    	case '2': header('location: menuDelegado.php');	break;
+    	case '3': header('location: menuArbitro.php');	break;
+      case '3': header('location: menuJefeArbitro.php');	break;
+
+
 	}
 }else if(isset($_POST['codigo']) && isset($_POST['password'])){
     $userForm = $_POST['codigo'];
@@ -22,11 +27,12 @@ if(isset($_SESSION['user'])){
         $userSession->setCurrentUser($userForm);
         $user->establecerDatos($userForm);
     switch ($user->getTipo()) {
-    	case '1': header('location: menuAdmin.php');		break;
-    	case '2': header('location: menuInstructor.php');	break;
-    	case '3': header('location: menuEstudiante.php');	break;
-	
-    	
+      case '1': header('location: menuAdmin.php');		break;
+    	case '2': header('location: menuDelegado.php');	break;
+    	case '3': header('location: menuArbitro.php');	break;
+      case '3': header('location: menuJefeArbitro.php');	break;
+
+
     	//default:header('location: ../index.php');				break;
     }
     }else{
