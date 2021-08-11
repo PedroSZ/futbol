@@ -70,7 +70,7 @@
     foreach ($jugadores as $jugador) {
       echo "<tr>
       <td>".$jugador['id']."</td>
-      <td>".$jugador['foto']."</td>
+      <td style='text-align:center'><img width='100' height='100' img src='<?php echo base64_encode(\"".$jugador['foto']."\"); ?>'> </td>
       <td>".$jugador['Nombre']."</td>
       <td>".$jugador['a_paterno']."</td>
 	    <td>".$jugador['a_materno']."</td>
