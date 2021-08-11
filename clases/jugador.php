@@ -1,5 +1,5 @@
 <?php
-//******ALTA USUARIO ESTUDIANTE (RF-07)
+//****** CLASE DE JUGADOR
 include_once 'db.php';
 class Jugador extends DB {
 	private $id;
