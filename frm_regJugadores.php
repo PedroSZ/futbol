@@ -4,9 +4,38 @@
     <head>
         <meta charset="utf-8" />
         <title>Registrar jugador</title>
-    </head>
-    <body>
+        <style type="text/css">
+          #preview {
+            border:1px solid #ddd;
+            width: 150px;
+            height: 200px;
+            padding:5px;
+            border-radius:2px;
+            background:#fff;
+            max-width:200px;
+          }
 
+          #preview img {width:100%;display:block;}
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>   
+        <script type="text/javascript">
+          document.getElementById("file").onchange = function(e) {
+            let reader = new FileReader();
+            reader.onload = function(){
+              let preview = document.getElementById('preview'),
+              image = document.createElement('img');
+              image.src = reader.result;
+              preview.innerHTML = '';
+              preview.append(image);
+            };
+            reader.readAsDataURL(e.target.files[0]);
+          }
+      </script>
+    </head>
+
+    <body>
+      <input id="file" type="file" accept="image/*" />
+<div id="preview"></div>
 <form method="post" style="width: 500px; height:auto;" onsubmit="return validar()" action="modulos/mdl_regJugador.php" id="frm_regJugadores" >
   <table border="0" style="font-weight: 600; font-size: 17px;">
   <tr>
@@ -39,14 +68,14 @@
       <label>Foto:</label>
     </td>
     <td style="text-align: right;">
-      <img id="imagenPrevisualizacion">
-      <script src="Scripts/fotoPreview.js"></script>
+
     </td>
   </tr>
   <tr>
     <td></td>
     <td>
-      <p><input type="file" accept="image/*" class="form-control" name="foto" value="" id="foto"></p>
+      <input type="file" accept="image/*" id="file" />
+      <div id="preview"></div>
     </td>
   </tr>
 
@@ -96,9 +125,8 @@
           <label>Equipo:</label>
         </td>
         <td>
-           <p>select name="equipo" type="text" id ="grado">
-        <option>Seleccione:</option>
-        <option>Sin equipo</option>';
+           <p>select name="equipo" type="text" id ="grado" placeholder="Seleccione">';
+
         foreach ($jugadores as $jugador) {
           echo $equipo['nombre'];
         }
