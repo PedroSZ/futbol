@@ -1,7 +1,7 @@
 <?php
 //****** CLASE DE EQUIPO
 include_once 'db.php';
-class Jugador extends DB {
+class Equipo extends DB {
 	private $clave;
 	private $nombre;
 	private $campo1;
