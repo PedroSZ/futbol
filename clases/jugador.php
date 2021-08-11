@@ -1,7 +1,7 @@
 <?php
 //******ALTA USUARIO ESTUDIANTE (RF-07)
 include_once 'db.php';
-class Jugadores extends DB {
+class Jugador extends DB {
 	private $id;
 	private $nombre;
 	private $apellidos
@@ -50,7 +50,7 @@ class Jugadores extends DB {
 		$query = $this->connect()->prepare('DELETE FROM jugador WHERE id = :id');
 		$query->execute(['id' => $id]);
 	}
-	
+
 	public function tranferenciaDeEquipo($id){
 		$sql = "UPDATE jugador SET equipo = :equipo	WHERE id = :id";
 		$query = $this->connect()->prepare($sql);

@@ -48,8 +48,8 @@
                  <form method="post" action="PlantillaPorHoja.php" name="frm_PlantillaPorHoja" id="frm_PlantillaPorHoja" >
 					<input type="hidden" id="micodigo" name="micodigo">
   <?php
-  include_once 'clases/jugadores.php';
-  $jug = new Jugadores();
+  include_once 'clases/jugador.php';
+  $jug = new Jugador();
   $jugadores = $jug->listar();
   if($jugadores){
     echo "

@@ -1,13 +1,13 @@
-<!-- *****ALTA USUARIO ESTUDIANTE (RF-07) -->
-<form method="post" style="width: 500px; height:auto;" onsubmit="return validar()" action="modulos/mdl_regEstudiantes.php" id="frm_regEstudiantes" >
+<!-- *****ALTA DE UN JUGADOR -->
+<form method="post" style="width: 500px; height:auto;" onsubmit="return validar()" action="modulos/mdl_regJugador.php" id="frm_regJugadores" >
   <table border="0" style="color:#FFFFFF
-  ; font-weight: 600; font-size: 17px;"> 
+  ; font-weight: 600; font-size: 17px;">
   <tr>
     <td width="50%" style="text-align: right;">
       <p><label>CURP:</label></p>
     </td>
     <td>
-      <p><input name="codigo" type="text" placeholder="Ingresar CURP" id ="codigo"></p>
+      <p><input name="id" type="text" placeholder="Ingresar id" id ="id"></p>
     </td>
   </tr>
   <tr>
@@ -26,95 +26,67 @@
       <p><input name="apellidos" type="text" placeholder="Ingresar Apellidos" id ="apellidos"></p>
     </td>
   </tr>
+
+  <tr>
+    <td style="text-align: right;">
+      <p><label>Localidad:</label></p>
+    </td>
+    <td>
+      <p><input name="localidad" type="text" placeholder="Ingresar localidad donde vive" id ="localidad"></p>
+    </td>
+  </tr>
+
+  <tr>
+    <td style="text-align: right;">
+      <p><label>Año de nacimiento:</label></p>
+    </td>
+    <td>
+      <p><input name="nacimiento" type="text" placeholder="Ingresar el año en que nacio a cuatro digitos." id ="nacimiento"></p>
+    </td>
+  </tr>
+
    <tr>
     <td style="text-align: right;">
-      <p><label>Carrera:</label></p>
+      <p><label>Estatus:</label></p>
     </td>
     <td>
       <p>
-      <select name="carrera" type="text" id ="carrera">
-        <option>Seleccione:</option>
-        
-        <option>Contabilidad</option>
-        
-        <option>Programación</option>
-        
-        <option>Ofimatica</option>
-        
-        <option>Electrónica</option>
-        
-        <option>Mecánica</option>
-        
-        </select>
+      <select name="Estatus" type="text" id ="estatus">
+        <option>LOCAL</option>
+        <option>FORANEO</option>
+      </select>
       </p>
-      
+
     </td>
   </tr>
-  <tr>
-    <td style="text-align: right;">
-      <p><label>Grado:</label></p>
-    </td>
-    <td>
-       <p>
-      <select name="grado" type="text" id ="grado">
+
+
+   <?php
+   include_once 'clases/equipo.php';
+   $eq = new Equipo();
+   $equipos = $eq->listar();
+   if($equipos){
+     echo '
+      <tr>
+        <td style="text-align: right;">
+          <p><label>Equipo:</label></p>
+        </td>
+        <td>
+           <p>select name="equipo" type="text" id ="grado">
         <option>Seleccione:</option>
-        
-        <option>1ro.</option>
-        
-        <option>2do.</option>
-        
-        <option>3ro.</option>
-        
-        <option>4to.</option>
-        
-        <option>5to.</option>
-        
-        <option>6to.</option>
-        
-        </select>
+        <option>Sin equipo</option>';
+        foreach ($jugadores as $jugador) {
+          echo $equipo['nombre'];
+        }
+        echo "</select>
       </p>
     </td>
-  </tr>
-  
-  <tr>
-    <td style="text-align: right;">
-      <p><label>Grupo:</label></p>
-    </td>
-    <td>
-      
-       <select name="grupo" type="text" id ="grupo">
-        <option>Seleccione:</option>
-        
-        <option>A</option>
-        
-        <option>B</option>
-        
-        <option>C</option>
-        
-        <option>D</option>
-  
-        </select>
-      
-      
-    </td>
-  </tr>
-  
-  <tr>
-    <td style="text-align: right;">
-      <p><label>Contraseña:</label></p>
-    </td>
-    <td>
-      <p><input name="psw1" type="password" placeholder="Ingresar Contraseña"  id ="psw1"></p>
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align: right;">
-      <p><label>Confirmar Contraseña:</label></p>
-    </td>
-    <td>
-      <p><input name="psw2" type="password" placeholder="Vuelve a escribir la Contraseña"  id ="psw2"></p>
-    </td>
-  </tr>
+  </tr>";
+      }
+      else{
+        echo " <p>No hay equipos registrados en la base de datos</p>";
+      }
+    ?>
   <tr>
     <td colspan="2" style="text-align: center;">
       <BR>
