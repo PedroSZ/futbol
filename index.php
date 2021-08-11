@@ -22,7 +22,7 @@ PAGINA ACTUALIZADA PARTE DEL TITULO DE LA PAGINA
 		</style>
 	</head>
 	<body>
-	 	<iframe src="Jugadores.php"></iframe>
+	 	<iframe src="menuAdmin.php"></iframe>
 
 	</body>
 </html>

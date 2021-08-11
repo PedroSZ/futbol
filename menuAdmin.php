@@ -39,6 +39,8 @@
 
        <div id="menu">
     <ul>
+        <li class="has-sub"><a title="" href="frm_regJugadores.php">Agregar Jugador</a>
+        <li class="has-sub"><a title="" href="frm_regEquipo.php">Agregar Equipo</a>
         <li class="has-sub"><a title="" href="">Plantillas</a>
         <li class="has-sub"><a title="" href="PlantillaPorHoja.php">Por Hoja</a>
         </li>

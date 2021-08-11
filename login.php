@@ -27,7 +27,7 @@ PAGINA ACTUALIZADA: PARTE DEL ENCABEZADO, LOGOTIPO Y PIE DE PAGINA
         <!-- contenido principal -->
         <section id="contenidoLogin">
             <article style="text-align: center;">
-               	<form action="login.php" method="POST" style="margin: 0 auto; width: 200px; height: 270px; background-color: gray;">
+               	<form action="login.php" method="POST" style="margin: 0 auto; width: 200px; height: 270px;">
                     <h2>Iniciar sesión</h2>
                     <p>Usuario: <br>
                     <input type="text" name="codigo"></p>
