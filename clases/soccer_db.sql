@@ -97,6 +97,7 @@ COMMIT;
 ALTER TABLE `jugador` DROP `a_materno`;
 ALTER TABLE `jugador` CHANGE `a_paterno` `apellidos` VARCHAR(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL;
 ALTER TABLE `jugador` CHANGE `Nombre` `nombre` VARCHAR(25) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL;
+ALTER TABLE `jugador` CHANGE `nacimiento` `nacimiento` YEAR NULL DEFAULT NULL;
 CREATE TABLE `usuario` (
   `user_name` varchar(20) COLLATE utf8_spanish2_ci NOT NULL,
   `pasword` varchar(255) COLLATE utf8_spanish2_ci NOT NULL,
