@@ -17,30 +17,45 @@
 
           #preview img {width:100%;display:block;}
         </style>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>   
-        <script type="text/javascript">
-          document.getElementById("file").onchange = function(e) {
-            let reader = new FileReader();
-            reader.onload = function(){
-              let preview = document.getElementById('preview'),
-              image = document.createElement('img');
-              image.src = reader.result;
-              preview.innerHTML = '';
-              preview.append(image);
-            };
-            reader.readAsDataURL(e.target.files[0]);
-          }
+        <script language='javascript'>
+        function verFoto(){
+        const status = document.getElementById('status');
+        const output = document.getElementById('output');
+        if (window.FileList && window.File && window.FileReader) {
+          document.getElementById('foto').addEventListener('change', event => {
+            output.src = '';
+            status.textContent = '';
+            const file = event.target.files[0];
+            if (!file.type) {
+              status.textContent = 'Error: The File.type property does not appear to be supported on this browser.';
+              return;
+            }
+            if (!file.type.match('image.*')) {
+              status.textContent = 'Error: The selected file does not appear to be an image.'
+              return;
+            }
+            const reader = new FileReader();
+            reader.addEventListener('load', event => {
+              output.src = event.target.result;
+            });
+            reader.readAsDataURL(file);
+          });
+        }
+      }
       </script>
     </head>
 
     <body>
-      <input id="file" type="file" accept="image/*" />
-<div id="preview"></div>
-<form method="post" style="width: 500px; height:auto;" onsubmit="return validar()" action="modulos/mdl_regJugador.php" id="frm_regJugadores" >
+
+
+
+
+
+<form method="post" enctype="multipart/form-data" style="width: 500px; height:auto;" onsubmit="return validar()" action="modulos/mdl_regJugador.php" id="frm_regJugadores" >
   <table border="0" style="font-weight: 600; font-size: 17px;">
   <tr>
     <td width="50%" style="text-align: right;">
-      <label>CURP:</label>
+      <label>ID:</label>
     </td>
     <td>
       <p><input name="id" type="text" placeholder="Ingresar id" id ="id"></p>
@@ -68,14 +83,17 @@
       <label>Foto:</label>
     </td>
     <td style="text-align: right;">
-
+      <input name="imgFoto" type="file" accept="image/*" id="foto"  onclick="verFoto()" >
+      <p id="status"></p>
+      <div id="preview">
+        <img id="output">
+      </div>
     </td>
   </tr>
   <tr>
     <td></td>
     <td>
-      <input type="file" accept="image/*" id="file" />
-      <div id="preview"></div>
+
     </td>
   </tr>
 
@@ -104,7 +122,7 @@
     </td>
     <td>
       <p>
-      <select name="Estatus" type="text" id ="estatus">
+      <select name="estatus" type="text" id ="estatus">
         <option>LOCAL</option>
         <option>FORANEO</option>
       </select>
@@ -141,6 +159,7 @@
             <label>Equipo:</label>
           </td>
           <td>
+            <input type="hidden" name="equipo">
             <p>No hay equipos registrados</p>
           </td>
         </tr>';

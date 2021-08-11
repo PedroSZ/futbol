@@ -4,7 +4,7 @@ include_once 'db.php';
 class Jugador extends DB {
 	private $id;
 	private $nombre;
-	private $apellidos
+	private $apellidos;
 	private $foto;
 	private $localidad;
 	private $nacimiento;
@@ -20,7 +20,7 @@ class Jugador extends DB {
 	public function setLocalidad($localidad){ $this->localidad = $localidad; }
 	public function setNacimiento($nacimiento){ $this->nacimiento = $nacimiento; }
 	public function setEstatus($estatus){ $this->estatus = $estatus; }
-	public function setEquipo_Id($equipo_id){ $this->equipo_id = $equipo_id; }
+	public function setEquipo($equipo_id){ $this->equipo_id = $equipo_id; }
 
 	public function getId(){ return $this->id; }
 	public function getNombre(){ return $this->nombre; }
@@ -29,7 +29,7 @@ class Jugador extends DB {
 	public function getLocalidad(){ return $this->localidad; }
 	public function getNacimiento(){ return $this->nacimiento; }
 	public function getEstatus(){ return $this->estatus; }
-	public function getEquipo_Id(){ return $this->equipo_id; }
+	public function getEquipo(){ return $this->equipo_id; }
 
 
 	//******************************************************************
@@ -71,17 +71,22 @@ class Jugador extends DB {
 	}
 
 	public function guardar() {
-		$sql = "INSERT INTO estudiante (id, nombre, apellidos, foto, localidad, nacimiento, status) VALUES(:id, :nombre, :apellidos, :foto, :localidad, :nacimiento, :status, :equipo)";
+		$_id = $this->id;
+		$_nombre = $this->nombre;
+		$_apellidos = $this->apellidos;
+		$_foto = $this->foto;
+		$_carrera = $this->foto;
+		$_localidad = $this->localidad;
+		$_nacimiento = $this->nacimiento;
+		$_estatus = $this->estatus;
+		$_equipo = $this->equipo_id;
+		if ($_equipo == "")
+			$sql = "INSERT INTO jugador (id, nombre, apellidos, foto, localidad, nacimiento, estatus) VALUES('".$_id."', '".$_nombre."', '".$_apellidos."', '".$_foto."', '".$_localidad."', ".$_nacimiento.", '".$_estatus."')";
+		else
+			$sql = "INSERT INTO jugador (id, nombre, apellidos, foto, localidad, nacimiento, estatus, equipo) VALUES(".$_id.", ".$_nombre.", ".$_apellidos.", ".$_foto.", ".$_localidad.", ".$_nacimiento.", ".$_estatus.", ".$_equipo.")";
+		//echo $sql.";";
 		$query = $this->connect()->prepare($sql);
-		$query->execute([
-			'id' => $this->id,
-			'nombre' => $this->nombre,
-			'apellidos' => $this->apellidos,
-			'carrera' => $this->foto,
-			'grado' => $this->localidad,
-			'grupo' => $this->nacimiento,
-			'status' => $this->status,
-			'equipo' => $this->equipo]);
+		$query->execute();
 	}
 }
 
