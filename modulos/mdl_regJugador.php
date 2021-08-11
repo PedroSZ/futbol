@@ -44,5 +44,6 @@
 				//$est->actualizar($codigo);
 				//header("Refresh: 5; Location:".$_SERVER['HTTP_REFERER']);//regresa al pagina que estaba
 				//header ("Location: ../listActualizarEstudiante.php");
+				header("Location:".$_SERVER['HTTP_REFERER']);//regresa al pagina que estaba
 			}
 ?>
