@@ -1,65 +1,65 @@
 function validar(){
-	var txtCodigo = document.getElementById("codigo").value;
+	var txtId = document.getElementById("id").value;
 	var txtNombre = document.getElementById("nombre").value;
 	var txtApellidos = document.getElementById("apellidos").value;
-	
-	var txtCarrera = document.getElementById("carrera").value;
-	var txtGrado = document.getElementById("grado").value;
-	var txtGrupo = document.getElementById("grupo").value;
-	
-	
-	var txtPsw1 = document.getElementById("psw1").value;
-	var txtPsw2 = document.getElementById("psw2").value;
-	
 
-	if (txtCodigo == null || txtCodigo.length == 0 ){ 
+	var txtFoto = document.getElementById("foto").value;
+	var txtLocalidad = document.getElementById("localidad").value;
+	var txtNacimiento = document.getElementById("nacimiento").value;
+
+
+	var txtEstatus = document.getElementById("estatus").value;
+	var txtEquipo = document.getElementById("Equipo").value;
+
+
+	if (txtCodigo == null || txtCodigo.length == 0 ){
       	alert("Tiene que su CURP");
       	document.getElementById('codigo').focus();
-      	return false; 
+      	return false;
    	}
-   	if (txtNombre == null || txtNombre.length == 0 ){ 
+   	if (txtNombre == null || txtNombre.length == 0 ){
       	alert("Tiene que escribir el nombre");
       	document.getElementById('nombre').focus();
-      	return false; 
+      	return false;
    	}
-   	if (txtApellidos == null || txtApellidos.length == 0 ){ 
+   	if (txtApellidos == null || txtApellidos.length == 0 ){
       	alert("Tiene que escribir el o los apellidos");
       	document.getElementById('apellidos').focus();
-      	return false; 
+      	return false;
    	}
-	
-	
-	
-	if (txtCarrera == null || txtCarrera.length == 0 ){ 
+
+
+
+	if (txtCarrera == null || txtCarrera.length == 0 ){
       	alert("Tienes que escribir tu carrera");
       	document.getElementById('carrera').focus();
-      	return false; 
+      	return false;
    	}
-	if (txtGrado == null || txtGrado.length == 0 ){ 
+	if (txtGrado == null || txtGrado.length == 0 ){
       	alert("Tienes que escribir tu grado");
       	document.getElementById('grado').focus();
-      	return false; 
+      	return false;
    	}
-	if (txtGrupo == null || txtGrupo.length == 0 ){ 
+	if (txtGrupo == null || txtGrupo.length == 0 ){
       	alert("Tiene que escribir tu grupo");
       	document.getElementById('grupo').focus();
-      	return false; 
+      	return false;
    	}
-	
-	
-	
-	
 
-   	if (txtPsw1 == null || txtPsw1.length == 0 ){ 
+
+
+
+
+   	if (txtPsw1 == null || txtPsw1.length == 0 ){
       	alert("Tiene que escribir una contraseña");
       	document.getElementById('psw1').focus();
-      	return false; 
+      	return false;
    	}
-   	
-   	if (txtPsw2 == null || txtPsw2.length == 0 ){ 
+
+   	if (txtPsw2 == null || txtPsw2.length == 0 ){
       	alert("Tiene que confirmar la contraseña");
       	document.getElementById('psw2').focus();
-      	return false; 
+      	return false;
    	}
 
    	if(txtPsw1 != txtPsw2){
@@ -68,7 +68,7 @@ function validar(){
       	return false;
    	}
 
-   	
+
 }
 
 function limpiar() {

@@ -21,8 +21,16 @@
 <html>
     <head>
         <title>Liga-bit</title>
-        <link rel="stylesheet" href="css/main.css" />
-        <link rel="stylesheet" href="css/menu.css">
+      <link rel="stylesheet" href="css/main.css" />
+
+
+
+        <meta name=”viewport” content=”width=device-width, user-scalable=no”>
+        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+
+
+        <script src="Scripts/menu.js"></script>
+        <link rel="stylesheet" href="css/menu.css" />
 
 
     </head>
@@ -34,6 +42,8 @@
         <!-- Menu para moviles
         <nav></nav>-->
 
+
+
         <!-- Menu lateral-->
         <aside id='cssmenu'>
 
@@ -41,17 +51,20 @@
     <ul>
         <li class="has-sub"><a title="" href="frm_regJugadores.php">Agregar Jugador</a>
         <li class="has-sub"><a title="" href="frm_regEquipo.php">Agregar Equipo</a>
-        <li class="has-sub"><a title="" href="">Plantillas</a>
-        <li class="has-sub"><a title="" href="PlantillaPorHoja.php">Por Hoja</a>
+
+        <li class="has-sub"><a title="" href="PlantillaPorHoja.php">Platill Por Hoja</a>
         </li>
         <!--<li class="has-sub"><a title="" href="">Consultar Talleres</a></li> -->
-        <li class="has-sub"><a title="" href="">Por equipo</a>
+        <li class="has-sub"><a title="" href="PlantillaPorEquipo.php">Plantilla Por Equipo</a>
         </li>
 
         <li class="has-sub"><a title="" href="modulos/mdl_logout.php">Salir</a>
 
     </ul>
 </div>
+
+
+
 
 
 

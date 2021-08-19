@@ -17,7 +17,7 @@
 		$tam = $_FILES['imgFoto']['size'];
 		$ext = $imgExt = strtolower(pathinfo($img, PATHINFO_EXTENSION));
 		$allowExt  = array('jpeg', 'jpg', 'png', 'gif');
-		$directorio = $_SERVER['DOCUMENT_ROOT'].'/Futbol/fotos/';
+		$directorio = $_SERVER['DOCUMENT_ROOT'].'/futbol/fotos/';
 		$nombre = $persona->getId().".".$ext;
 
 		if (($img == !NULL) && ($_FILES['imgFoto']['size'] <= 200000))

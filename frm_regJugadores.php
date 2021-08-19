@@ -4,6 +4,8 @@
     <head>
         <meta charset="utf-8" />
         <title>Registrar jugador</title>
+        <link rel="stylesheet" href="css/main.css"/>
+        <link rel="stylesheet" href="css/forms.css">
         <style type="text/css">
           #preview {
             border:1px solid #ddd;
@@ -46,12 +48,15 @@
     </head>
 
     <body>
+        <div id="contenedor">
+      <!-- Encabezado de la pagina-->
+          <?php include_once 'modulos/mdl_header.php'; ?>
+      <!-- contenido principal -->
+  <section style="text-align: center; margin: 0 auto;">
 
 
-
-
-
-<form method="post" enctype="multipart/form-data" style="width: 500px; height:auto;" onsubmit="return validar()" action="modulos/mdl_regJugador.php" id="frm_regJugadores" >
+<div class="datagrid">
+<form method="post" enctype="multipart/form-data" style="width: 500px; height:auto;"  action="modulos/mdl_regJugador.php" id="frm_regJugadores" >
   <table border="0" style="font-weight: 600; font-size: 17px;">
   <tr>
     <td width="50%" style="text-align: right;">
@@ -123,48 +128,38 @@
     <td>
       <p>
       <select name="estatus" type="text" id ="estatus">
-        <option>LOCAL</option>
-        <option>FORANEO</option>
+        <option value="0">LOCAL</option>
+        <option value="1">FORANEO</option>
       </select>
       </p>
 
     </td>
   </tr>
-
+   <tr>
+    <td style="text-align: right;">
+    <label>Equipo:</label>
+  <p><select name="supervisor" type="text" id ="supervisor" required>
 
    <?php
    include_once 'clases/equipo.php';
    $eq = new Equipo();
    $equipos = $eq->listar();
-   if($equipos){
-     echo '
-      <tr>
-        <td style="text-align: right;">
-          <label>Equipo:</label>
-        </td>
-        <td>
-           <p>select name="equipo" type="text" id ="grado" placeholder="Seleccione">';
+      if($equipos){
+      echo "<option value='' disabled selected>Seleccione:</option>";
+        foreach ($equipos as $equipo) {
+          echo "<option value='".$equipo['id_equ']."'>".$equipo['nombre_eq']." </option>";
 
-        foreach ($jugadores as $jugador) {
-          echo $equipo['nombre'];
         }
-        echo "</select>
-      </p>
-    </td>
-  </tr>";
-      }
-      else{
-        echo ' <tr>
-          <td style="text-align: right;">
-            <label>Equipo:</label>
-          </td>
-          <td>
-            <input type="hidden" name="equipo">
-            <p>No hay equipos registrados</p>
-          </td>
-        </tr>';
-      }
+      	}
+     	 else{
+       		 echo "No ha registrado Equipos";
+         }
+
+
     ?>
+  </p>
+  </td>
+</tr>
   <tr>
     <td colspan="2" style="text-align: center;">
       <BR>
@@ -175,5 +170,10 @@
   </tr>
   </table>
 </form>
+</div>
+</section>
+<!-- Pie de pagina-->
+    <?php include_once 'modulos/mdl_footer.php'; ?>
+      </div>
 </body>
 </html>

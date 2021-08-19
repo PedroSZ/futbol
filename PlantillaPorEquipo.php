@@ -54,7 +54,7 @@
             <article style="width:auto; height:auto;text-align: center; margin: 0 auto;">
 
                  <div class="datagrid">
-                 <form method="post" action="PlantillaPorHoja.php" name="frm_PlantillaPorHoja" id="frm_PlantillaPorHoja" >
+                 <form method="post" action="PlantillaPorEquipo.php" name="frm_PlantillaPorEquipo" id="frm_PlantillaPorEquipo" >
 					<input type="hidden" id="micodigo" name="micodigo">
   <?php
   include_once 'clases/jugador.php';
