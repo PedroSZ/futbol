@@ -78,7 +78,11 @@
     foreach ($jugadores as $jugador) {
       echo "<tr>
       <td>".$jugador['id']."</td>
-      <td style='text-align:center'><img width='100' height='100' img src='<?php echo base64_encode(\"".$jugador['foto']."\"); ?>'> </td>
+      <td>
+            <a href='".$_SERVER["HTTP_REFERER"]."'>
+              <img  src='".$jugador['foto']."' width='120' height='120' title='".$jugador['nombre']."'/>
+            </a>
+      <td>
       <td>".$jugador['nombre']."</td>
 	    <td>".$jugador['apellidos']."</td>
 	    <td>".$jugador['localidad']."</td>
