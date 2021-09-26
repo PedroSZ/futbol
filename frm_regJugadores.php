@@ -17,6 +17,7 @@
             max-width:200px;
           }
 
+
           #preview img {width:100%;display:block;}
         </style>
         <script language='javascript'>
