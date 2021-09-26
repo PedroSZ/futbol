@@ -1,22 +1,3 @@
-<?php
-	/********************** VALIDAMOS QUE ESTA PAGINA SEA PARA LA SESION INICIADA ****************/
-    /*include_once 'clases/usuario.php';
-    include_once 'clases/sesion.php';
-    $userSession = new Sesion();
-
-    if(isset($_SESSION['user'])){
-        $user = new Usuario();
-        $user->establecerDatos($userSession->getCurrentUser());
-        $tipo = $user->getTipo();
-		//mensaje de que no tiene privilegios
-        if($tipo <> 3) header('location: index.php');;
-    }
-    else{
-        $userSession->closeSession();
-    }*/
-	/**********************************************************************************************/
-?>
-
 </!DOCTYPE html>
 <html>
     <head>
@@ -48,7 +29,7 @@
         <aside id='cssmenu'>
 
        <div id="menu">
-    <ul>
+         <ul>
         <li class="has-sub"><a title="" href="frm_regJugadores.php">Agregar Jugador</a>
         <li class="has-sub"><a title="" href="frm_regEquipo.php">Agregar Equipo</a>
 
@@ -60,14 +41,8 @@
 
         <li class="has-sub"><a title="" href="modulos/mdl_logout.php">Salir</a>
 
-    </ul>
+        </ul>
 </div>
-
-
-
-
-
-
 
         </aside>
 
@@ -79,7 +54,5 @@
         <!-- Pie de pagina-->
             <?php include_once 'modulos/mdl_footer.php'; ?>
     </div>
-
-
     </body>
 </html>
