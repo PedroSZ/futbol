@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <!doctype html>
+=======
+</!DOCTYPE html>
+>>>>>>> 6037d6d51faea8299e9c2c8f3e8804823bffc442
 <html>
   <head>
     <meta charset="utf-8">
@@ -110,15 +114,23 @@
                       </div>
                   </nav>
 
+<<<<<<< HEAD
                   <h2>Collapsible Sidebar Using Bootstrap 4</h2>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+=======
+       <div id="menu">
+         <ul>
+        <li class="has-sub"><a title="" href="frm_regJugadores.php">Agregar Jugador</a>
+        <li class="has-sub"><a title="" href="frm_regEquipo.php">Agregar Equipo</a>
+>>>>>>> 6037d6d51faea8299e9c2c8f3e8804823bffc442
 
                   <div class="line"></div>
 
                   <h2>Lorem Ipsum Dolor</h2>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
+<<<<<<< HEAD
                   <div class="line"></div>
 
                   <h2>Lorem Ipsum Dolor</h2>
@@ -147,4 +159,20 @@
               });
           </script>
       </body>
+=======
+        </ul>
+</div>
+
+        </aside>
+
+        <!-- contenido principal -->
+        <section>
+            <article><?php if(isset($message)) echo $message; ?></article>
+        </section>
+
+        <!-- Pie de pagina-->
+            <?php include_once 'modulos/mdl_footer.php'; ?>
+    </div>
+    </body>
+>>>>>>> 6037d6d51faea8299e9c2c8f3e8804823bffc442
 </html>
