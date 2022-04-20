@@ -3,7 +3,7 @@
 <html lang="es">
     <head>
         <meta charset="utf-8" />
-        <title>Registrar jugador</title>
+        <title>Registrar Equipo</title>
         <link rel="stylesheet" href="css/main.css"/>
         <link rel="stylesheet" href="css/forms.css">
         <style type="text/css">
@@ -16,34 +16,10 @@
             background:#fff;
             max-width:200px;
           }
+
           #preview img {width:100%;display:block;}
         </style>
-        <script language='javascript'>
-        function verFoto(){
-        const status = document.getElementById('status');
-        const output = document.getElementById('output');
-        if (window.FileList && window.File && window.FileReader) {
-          document.getElementById('foto').addEventListener('change', event => {
-            output.src = '';
-            status.textContent = '';
-            const file = event.target.files[0];
-            if (!file.type) {
-              status.textContent = 'Error: The File.type property does not appear to be supported on this browser.';
-              return;
-            }
-            if (!file.type.match('image.*')) {
-              status.textContent = 'Error: The selected file does not appear to be an image.'
-              return;
-            }
-            const reader = new FileReader();
-            reader.addEventListener('load', event => {
-              output.src = event.target.result;
-            });
-            reader.readAsDataURL(file);
-          });
-        }
-      }
-      </script>
+
     </head>
 
     <body>

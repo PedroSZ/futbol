@@ -1,0 +1,97 @@
+.credencial{
+  color: #00b4e1;
+  font-family: 'Source Sans Pro';
+  background-color: #fff;
+  width: 11cm;
+  height: 7cm;
+  position: relative;
+  border-radius: 10px;
+    overflow: hidden;
+  z-index: 0;
+}
+
+.heading .logo, .heading .subtitle, .foto, img, .datos{
+  position: absolute;
+}
+
+
+
+.datos, .heading .subtitle{
+  list-style: none;
+}
+
+.datos{
+  color: #B0BBC8;
+  top: 2cm;
+  font-size: 0.29cm;
+  font-weight: 600;
+  left: 1.78cm;
+  letter-spacing: 0.1mm
+}
+
+.heading .subtitle{
+  font-size: 6.5mm;
+  left: 5mm;
+  line-height: 3mm;
+  font-weight: 500;
+  color: #009cc3;
+  text-align: center;
+  line-height: 5mm;
+   margin-left: 1cm;
+
+}
+
+/*img{
+
+
+   top: 50%;
+   transform: translate(-25.5%, -32.2%) scale(0.6);
+  z-index: -1;
+}*/
+
+
+
+.foto{
+  height: 1.005cm;
+  width: 1.88cm;
+  right: 2mm;
+  top: 0.2mm;
+   margin-top: 3mm;
+  text-align: justify;
+}
+
+.foto img{
+  height: 1.005cm;
+  width: 1.88cm;
+
+}
+
+.foto2{
+  height: 1.6cm;
+  width: 1.88cm;
+  margin-top: 0.2mm;
+ margin-left: 5mm;
+   margin-top: 3mm;
+  inline-size: fit-content;
+}
+.foto2 img{
+  height: 1.6cm;
+  width: 1.88cm;
+
+
+}
+
+
+
+.foto3{
+  height: 3cm;
+  width: 2cm;
+  margin-top: 3mm;
+ margin-left: 5mm;
+inline-size: fit-content;
+}
+
+.foto3 img{
+  height: 3cm;
+  width: 2cm;
+}

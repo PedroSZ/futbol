@@ -26,7 +26,7 @@
         <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap-grid.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+        <link rel="stylesheet" href="css/credencial.css"/>
 
 
 
@@ -62,36 +62,70 @@
   $jugadores = $jug->listar();
   if($jugadores){
     echo "
-    <h4>Listado de Jugadores</h4>
-      <table border='1'><thead>
-      <tr>
-        <th style='text-align:center'>ID</th>
-        <th style='text-align:center'>Foto</th>
-        <th style='text-align:center'>Nombre</th>
-		    <th style='text-align:center'>Apellidos</th>
-        <th style='text-align:center'>Localidad</th>
-		    <th style='text-align:center'>Nacimiento</th>
-        <th style='text-align:center'>Estatus</th>
-        <th style='text-align:center'>Equipo</th>
-        <th style='text-align:center'>Opciones</th>
-      </tr></thead>";
+    <h4>Listado de Jugadores</h4>";
     foreach ($jugadores as $jugador) {
-      echo "<tr>
-      <td>".$jugador['id']."</td>
-      <td style='text-align:center'><img width='100' height='100' img src='<?php echo base64_encode(\"".$jugador['foto']."\"); ?>'> </td>
-      <td>".$jugador['nombre']."</td>
-	    <td>".$jugador['apellidos']."</td>
-	    <td>".$jugador['localidad']."</td>
-      <td>".$jugador['nacimiento']."</td>
-      <td>".$jugador['estatus']."</td>
-      <td>".$jugador['equipo_id']."</td>
-      <td style='text-align:center'><img width='30' height='30' src='imgs/delete.png' onClick='quitar(\"".$jugador['id']."\");'></td>
-      </tr>";
-    }
-    echo "</table>";
+      echo"
+
+      <div class='credencial'>
+  <div class='heading'>
+
+    <ul class='subtitle'>
+
+      <li>LIGA PREMIER MASTER</li>
+      <li>40 SABATINA</li>
+    </ul>
+  </div>
+
+  <div class='foto'>
+  <img  src='./imgs/logoMinsa.jpg'/>
+  </div>
+
+   <div class='foto2'>
+    <img  src='./imgs/logoLiga.jpg'/>
+  </div>
+
+   <div class='foto3'>
+
+    <a href='".$_SERVER["HTTP_REFERER"]."'>
+      <img  src='".$jugador['foto']."'  title='".$jugador['nombre']."'/>
+    </a>
+  </div>
+
+
+  <ul class='datos'>
+      <li>
+        PREMIER MASTER SABATINA 40
+      </li>
+      <li>
+       Certifica que el equipo:
+      </li>
+      <li>
+        Tiene registrado
+      </li>
+      <li>
+        al Jugador: <a>".$jugador['nombre']. " ".$jugador['nombre']."</a>
+      </li>
+     <li>
+        Fecha de nacimiento: <a>".$jugador['nacimiento']."</a>
+      </li>
+     <li>
+        Temporada:
+      </li>
+     <li>
+        ____De_____________de 2020:
+      </li>
+    </ul>
+
+  <ul class='firma'>
+
+
+<a>Firma del Jugador </a> <a> Presidente o Secretario de la liga</a>
+</ul>
+</div>";}
+
   }
   else{
-    echo " <p>No hay estudiantes registrados en la base de datos</p>";
+    echo " <p>No hay jugadores registrados en la base de datos</p>";
   }
 
 

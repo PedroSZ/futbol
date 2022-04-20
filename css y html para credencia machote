@@ -1,0 +1,152 @@
+PAGINA PARA HACERLO
+https://codepen.io/ratacibernetica/pen/oqyEMz
+
+HTML
+
+<div class="credencial">
+  <div class="heading">
+
+    <ul class="subtitle">
+
+      <li>LIGA PREMIER MASTER</li>
+      <li>40 SABATINA</li>
+    </ul>
+  </div>
+
+  <div class="foto">
+    this is la foto, ese
+  </div>
+
+   <div class="foto2">
+    this is la foto, ese
+  </div>
+
+   <div class="foto3">
+    this is la foto, ese
+  </div>
+
+   <img src="https://lh3.googleusercontent.com/-VaXjRFbQDoA/WsL35UJ-trI/AAAAAAAAEVY/y8iSVwwhSq4SyFE4LGaS71LyTcv6YcgygCL0BGAYYCw/h1365/2018-04-02.png" alt="">
+
+
+  <ul class="datos">
+      <li>
+        PREMIER MASTER SABATINA 40
+      </li>
+      <li>
+       Certifica que el equipo:
+      </li>
+      <li>
+        Tiene registrado
+      </li>
+      <li>
+        al Jugador:
+      </li>
+     <li>
+        Fecha de nacimiento:
+      </li>
+     <li>
+        Temporada:
+      </li>
+     <li>
+        ____De_____________de 2020:
+      </li>
+    </ul>
+
+  <ul class="firma">
+      <li>
+        201503685
+      </li>
+      <li>
+        MARTIN ROLDAN ARAUJO
+      </li>
+      <li>
+        LIC EN MERC Y MED DIG DIST
+      </li>
+      <li>
+        COMPLEJO C UNIVERSITARIO
+      </li>
+    </ul>
+</div>
+
+
+css
+
+
+.credencial{
+  color: #00b4e1;
+  font-family: 'Source Sans Pro';
+  background-color: #002e4c;
+  width: 11cm;
+  height: 7cm;
+  position: relative;
+  border-radius: 10px;
+    overflow: hidden;
+  z-index: 0;
+}
+
+.heading .logo, .heading .subtitle, .foto, img, .datos{
+  position: absolute;
+}
+
+
+
+.datos, .heading .subtitle{
+  list-style: none;
+}
+
+.datos{
+  color: #B0BBC8;
+  top: 2cm;
+  font-size: 0.29cm;
+  font-weight: 600;
+  left: 1.78cm;
+  letter-spacing: 0.1mm
+}
+
+.heading .subtitle{
+  font-size: 6.5mm;
+  left: 5mm;
+  line-height: 3mm;
+  font-weight: 500;
+  color: #009cc3;
+  text-align: center;
+  line-height: 5mm;
+   margin-left: 1cm;
+
+}
+
+img{
+
+
+   top: 50%;
+   transform: translate(-25.5%, -32.2%) scale(0.6);
+  z-index: -1;
+}
+
+
+
+.foto{
+  height: 1.005cm;
+  width: 1.88cm;
+  right: 2mm;
+  top: 0.2mm;
+  background-color: white;
+   margin-top: 3mm;
+}
+
+.foto2{
+  height: 1.6cm;
+  width: 1.88cm;
+  margin-top: 0.2mm;
+ margin-left: 5mm;
+   margin-top: 3mm;
+  background-color: white;
+}
+.foto3{
+  height: 3cm;
+  width: 2cm;
+  margin-top: 3mm;
+ margin-left: 5mm;
+
+  background-color: white;
+}
