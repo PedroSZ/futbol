@@ -1,0 +1,146 @@
+[33mcommit f387e5ea988014d18437ab0079a318ff79c604cc[m[33m ([m[1;36mHEAD -> [m[1;32mMain[m[33m)[m
+Author: PedroSZ <solano_zepeda@hotmail.com>
+Date:   Wed Apr 20 12:09:33 2022 -0500
+
+    credencial v1
+
+[33mcommit f893499db75ac01e3271b010839c48133326fbe3[m[33m ([m[1;31morigin/Main[m[33m)[m
+Author: simple_web_application <solano_zepeda@hotmail.com>
+Date:   Thu Aug 19 11:28:01 2021 -0500
+
+    pedr19082021
+
+[33mcommit 8dfdbdd5d60816d28bf480781c81a36baf20d61c[m
+Author: solano555 <solano555@hotmail.com>
+Date:   Wed Aug 11 16:03:37 2021 -0500
+
+    ok
+
+[33mcommit 84c158a224f91fab8a694b353806f5ccf531e155[m
+Author: solano555 <solano555@hotmail.com>
+Date:   Wed Aug 11 15:55:11 2021 -0500
+
+    listo
+
+[33mcommit 9e4f101dd4fb99dcef44ddcd9575c993020af05b[m
+Author: solano555 <solano555@hotmail.com>
+Date:   Wed Aug 11 15:53:22 2021 -0500
+
+    Actulizar BD de la 97 en adelante.
+    
+    Co-Authored-By: null <solano555@users.noreply.github.com>
+
+[33mcommit d07c364a2fffb3b893123ee66db10c7ccc61cdb6[m
+Author: solano555 <solano555@hotmail.com>
+Date:   Wed Aug 11 15:51:01 2021 -0500
+
+    Formulario para registrar jugador terminado y funcionando.
+    
+    Co-Authored-By: null <solano555@users.noreply.github.com>
+
+[33mcommit 8c1f7df6386e149fe83745004b69943195343cbb[m[33m ([m[1;31morigin/jQuery[m[33m)[m
+Author: solano555 <solano555@hotmail.com>
+Date:   Wed Aug 11 12:58:02 2021 -0500
+
+    ok
+
+[33mcommit 56ef68df02d58dfa14692360f484a087fe5d1c1c[m
+Author: solano555 <solano555@hotmail.com>
+Date:   Wed Aug 11 10:11:12 2021 -0500
+
+    pk
+    
+    Co-Authored-By: null <solano555@users.noreply.github.com>
+
+[33mcommit fe5f75cedc806287fe5ddc273c8da898a655760c[m
+Author: solano555 <solano555@hotmail.com>
+Date:   Wed Aug 11 09:42:47 2021 -0500
+
+    Clase equipo
+    
+    Co-Authored-By: null <solano555@users.noreply.github.com>
+
+[33mcommit 82479e57b6c17d5500f0a03e54e38a6d56228d29[m
+Author: solano555 <solano555@hotmail.com>
+Date:   Wed Aug 11 09:33:02 2021 -0500
+
+    ok
+
+[33mcommit bc52118355ab3b6a1772635ae5ad0bacd2ca1c1f[m
+Author: solano555 <solano555@hotmail.com>
+Date:   Wed Aug 11 08:29:31 2021 -0500
+
+    Archivos no necesarios
+
+[33mcommit 2e40918314132f5a5dac7346914814870e2656cc[m
+Author: solano555 <solano555@hotmail.com>
+Date:   Wed Aug 11 08:25:08 2021 -0500
+
+    cambio de nombre de archivo
+
+[33mcommit 73ca7a364918f2e041a7226983b135b8698ec1c4[m
+Author: solano555 <88727363+solano555@users.noreply.github.com>
+Date:   Wed Aug 11 08:21:17 2021 -0500
+
+    Delete frm_regTalleres.php
+
+[33mcommit 2800881c0150c3131135c621a50f2aa7728ad9cb[m
+Author: solano555 <88727363+solano555@users.noreply.github.com>
+Date:   Wed Aug 11 08:20:24 2021 -0500
+
+    Delete Logotipo1.png
+
+[33mcommit 319418312975241539f5d4a74bcefaa289b9565b[m
+Author: solano555 <88727363+solano555@users.noreply.github.com>
+Date:   Wed Aug 11 08:19:30 2021 -0500
+
+    Delete forms directory
+
+[33mcommit 1cdac4ab9b0719740a3998b6a4c7b828ed377951[m
+Author: solano555 <88727363+solano555@users.noreply.github.com>
+Date:   Wed Aug 11 08:18:45 2021 -0500
+
+    Rename forms/frm_regEstudiantes.php to frm_regJugadores.php
+
+[33mcommit c303e2803ec657642b950ce8da296441bb91e9d9[m
+Author: solano555 <solano555@hotmail.com>
+Date:   Wed Aug 11 08:15:06 2021 -0500
+
+    Actualizaciones a los archivos.
+    
+    Co-Authored-By: null <solano555@users.noreply.github.com>
+
+[33mcommit 23f2c817d6fdc948db06d5f9a242908d8ec9f05c[m
+Merge: 44c778d c590ffb
+Author: solano555 <solano555@hotmail.com>
+Date:   Wed Aug 11 08:09:06 2021 -0500
+
+    Merge branch 'Main' of https://github.com/PedroSZ/futbol into Main
+
+[33mcommit c590ffb7b79673fe98b15df2e62c3d04fdb18c25[m
+Author: simple_web_application <solano_zepeda@hotmail.com>
+Date:   Tue Aug 10 14:40:51 2021 -0500
+
+    V1.0Por lista Second Commit
+
+[33mcommit 44c778d1e080339e6b78c2ded408adfe1837159f[m
+Author: solano555 <solano555@hotmail.com>
+Date:   Tue Aug 10 12:58:32 2021 -0500
+
+    Actualizacion de la clase jugador y ajustes por hacer a a BD
+    
+    Co-Authored-By: null <solano555@users.noreply.github.com>
+
+[33mcommit a0500655b938651139835ba1dcab7f24ea04ed67[m
+Author: solano555 <solano555@hotmail.com>
+Date:   Tue Aug 10 12:12:41 2021 -0500
+
+    Actulizaciones para logo, título, encabezado y pie de página
+    
+    Co-Authored-By: null <solano555@users.noreply.github.com>
+
+[33mcommit 7fc088ab661bd929d0a547f6badd384d048b5daa[m[33m ([m[1;32masd[m[33m)[m
+Author: simple_web_application <solano_zepeda@hotmail.com>
+Date:   Tue Aug 10 10:03:14 2021 -0500
+
+    V1.0 Por lista First Commit
