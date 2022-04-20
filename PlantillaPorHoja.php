@@ -64,7 +64,7 @@
     echo "
     <h4>Listado de Jugadores</h4>";
     foreach ($jugadores as $jugador) {
-<<<<<<< HEAD
+
       echo"
 
       <div class='credencial'>
@@ -124,26 +124,12 @@
 </ul>
 </div>";}
 
-=======
-      echo "<tr>
-      <td>".$jugador['id']."</td>
-      <td>
-            <a href='".$_SERVER["HTTP_REFERER"]."'>
-              <img  src='".$jugador['foto']."' width='120' height='120' title='".$jugador['nombre']."'/>
-            </a>
-      <td>
-      <td>".$jugador['nombre']."</td>
-	    <td>".$jugador['apellidos']."</td>
-	    <td>".$jugador['localidad']."</td>
-      <td>".$jugador['nacimiento']."</td>
-      <td>".$jugador['estatus']."</td>
-      <td>".$jugador['equipo_id']."</td>
-      <td style='text-align:center'><img width='30' height='30' src='imgs/delete.png' onClick='quitar(\"".$jugador['id']."\");'></td>
-      </tr>";
+
+
     }
-    echo "</table>";
->>>>>>> 6037d6d51faea8299e9c2c8f3e8804823bffc442
-  }
+
+
+  
   else{
     echo " <p>No hay jugadores registrados en la base de datos</p>";
   }

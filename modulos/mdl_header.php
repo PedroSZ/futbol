@@ -21,6 +21,6 @@
     	//if(isset($_SESSION['user'])) echo "->".$_SESSION['user'];
    ?>
     <h3>Titulo del header.</h3>
->>>>>>> 6037d6d51faea8299e9c2c8f3e8804823bffc442
+
 
 </header>
